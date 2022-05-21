@@ -1,4 +1,4 @@
-package br.com.springboot.serve.rh.domain;
+package br.com.springboot.server.rh.domain;
 
 import java.time.LocalDate;
 import java.util.Objects;

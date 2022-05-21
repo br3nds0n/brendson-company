@@ -1,4 +1,4 @@
-package br.com.springboot.serve;
+package br.com.springboot.server;
 
 import java.time.LocalDate;
 
@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import br.com.springboot.serve.rh.domain.Person;
-import br.com.springboot.serve.rh.domain.PersonRepository;
+import br.com.springboot.server.rh.domain.Person;
+import br.com.springboot.server.rh.domain.PersonRepository;
 
 @Component
 @Transactional
