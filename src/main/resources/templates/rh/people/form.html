@@ -13,16 +13,16 @@
 	<div class="container my-2">
 		<h1>People Management System</h1>
 		<hr>
-		<h2>Edit Person</h2>
+		<h2>Form</h2>
 		<form action="#" th:action="@{/rh/pessoas/salvar}" th:object="${person}" method="POST">
 			<input type="hidden" id="id" th:field="*{id}">
-			<input type="text" th:field="*{nome}" placeholder="Nome" class="form-control mb-4 col-4">
+			<input type="text" th:field="*{nome}" placeholder="Name" class="form-control mb-4 col-4">
       <input type="date" th:field="*{dataNascimento}" placeholder="Data Nascimento" class="form-control mb-4 col-4">
       <input type="text" th:field="*{cpf}" placeholder="CPF" class="form-control mb-4 col-4">
-			<input type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-4">
-      <input type="text" th:field="*{telefone}" placeholder="Telefone" class="form-control mb-4 col-4">
+			<input type="text" th:field="*{email}" placeholder="E-mail" class="form-control mb-4 col-4">
+      <input type="text" th:field="*{telefone}" placeholder="Phone" class="form-control mb-4 col-4">
 			
-			<button type="submit" class="btn btn-info col-2">To save</button>
+			<button type="submit" class="btn btn-info col-2">Save</button>
 		</form>
 		<hr>
 		<a th:href="@{/rh/pessoas}">Return to people list</a>
