@@ -28,7 +28,9 @@
 					<td th:text="${person.nome}"></td>
 					<td th:text="${person.telefone}"></td>
 					<td th:text="${person.email}"></td>
-					<td>			
+					<td>
+						<a th:href="@{/rh/pessoas/{id}(id=${person.id})}" class="btn btn-primary">Change</a>
+						<a th:href="@{/rh/pessoas/excluir/{id}(id=${person.id})}" class="btn btn-danger">Delete</a>	
 					</td>
 				</tr>
 			</tbody>
