@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -17,13 +19,18 @@ public class Person {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
 
+	@NotBlank(message = "name field cannot be empty")
   private String nome;
 
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   private LocalDate dataNascimento;
 
   private String cpf;
+
+	@NotBlank(message = "e-mail field cannot be empty")
+	@Email(message = "e-mail provided is invalid")
   private String email;
+
   private String telefone;
 
 	public Long getId() {
