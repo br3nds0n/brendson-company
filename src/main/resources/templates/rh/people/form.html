@@ -22,12 +22,17 @@
 			<input type="text" th:field="*{nome}" placeholder="Name" class="form-control mb-4 col-4">
 
       <input type="date" th:field="*{dataNascimento}" placeholder="Data Nascimento" class="form-control mb-4 col-4">
+
+			<span th:if="${#fields.hasErrors('cpf')}"th:errors="*{cpf}"
+			class="text-danger"></span>
       <input type="text" th:field="*{cpf}" placeholder="CPF" class="form-control mb-4 col-4">
 
 			<span th:if="${#fields.hasErrors('email')}"th:errors="*{email}"
 			class="text-danger"></span>
 			<input type="text" th:field="*{email}" placeholder="E-mail" class="form-control mb-4 col-4">
 
+			<span th:if="${#fields.hasErrors('telefone')}"th:errors="*{telefone}"
+			class="text-danger"></span>
       <input type="text" th:field="*{telefone}" placeholder="Phone" class="form-control mb-4 col-4">
 			
 			<button type="submit" class="btn btn-info col-2">Save</button>

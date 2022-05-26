@@ -3,6 +3,7 @@ package br.com.springboot.server.rh.domain;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,6 +11,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -20,17 +22,23 @@ public class Person {
   private Long id;
 
 	@NotBlank(message = "name field cannot be empty")
+	@Column(nullable = false)
   private String nome;
 
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   private LocalDate dataNascimento;
 
+	@CPF
+	@NotBlank(message = "cpf field cannot be empty")
+	@Column(nullable = false)
   private String cpf;
 
 	@NotBlank(message = "e-mail field cannot be empty")
 	@Email(message = "e-mail provided is invalid")
   private String email;
 
+	@NotBlank(message = "phone field cannot be empty")
+	@Column(nullable = false)
   private String telefone;
 
 	public Long getId() {

@@ -53,7 +53,7 @@ public class PersonController {
   public String deletePerson(@PathVariable("id") Long id, Model model) {
    Optional<Person> person = personRepository.findById(id);
    if(person.isEmpty()){
-      throw new IllegalArgumentException("Pessoa inválida.");
+      throw new IllegalArgumentException("invalid person.");
    }
 
    personRepository.delete(person.get());

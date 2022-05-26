@@ -30,6 +30,7 @@ public class InitialDatabasePopulation implements CommandLineRunner{
     Person p2 = new Person("Victor");
     p2.setDataNascimento(LocalDate.of(2002, 03, 26));
     p2.setEmail("victor.example@gmail.com");
+    p2.setTelefone("(81)9 8861-5976");
     p2.setCpf("11455961000");
 
     personRepository.save(p1);
